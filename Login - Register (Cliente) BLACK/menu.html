@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contenido="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/menuStyles.css">
+    <link rel="icon" type="image/svg" href="./images/logo.svg">
+</head>
+
+<body>
+
+    <div class="testimonials">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="contenido">
+                            <p>La mayoría de personas que son parte del banco siempre tiene alguna consulta, ¿tienes una para nosotros?</p>
+                            <div class="imgBx">
+                                <img src="./images/informacion.svg">
+                            </div>
+                            <div class="titulo">
+                                <h2>Preguntas Frecuentes...</h2>
+                                <a href="#info">
+                                    <button class="submit">nosotros...</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="contenido">
+                            <p>La mayoría de personas opta por trasferir dinero virtualmente, ayude con el distanciamiento social</p>
+                            <div class="imgBx">
+                                <img src="./images/Transferencia.svg">
+                            </div>
+                            <div class="titulo">
+                                <h2>¿Alguna trasferencia?</h2>
+                                <a href="#trans">
+                                    <button class="submit">transferencia</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="contenido">
+                            <p>¿Algo no cuadra? Es mejor revisarlo, tal vez hay algo de lo que no te enteraste, mejor mira tu historial.</p>
+                            <div class="imgBx">
+                                <img src="./images/historial.svg">
+                            </div>
+                            <div class="titulo">
+                                <h2>¿Desea ver su historial?</h2>
+                                <a href="#hist">
+                                    <button class="submit" onclick="clienteActual.verHistorial()">ver historial</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="contenido">
+                            <p>Banco la Salle es una de las mejores alternativas actuales en cuanto a disponibilidad de dinero y trato respecta </p>
+                            <div class="imgBx">
+                                <img src="./images/salir.svg">
+                            </div>
+                            <div class="titulo">
+                                <h2>¿Esta seguro que quere salir?</h2>
+                                <a href="login-registro.html">
+                                    <button class="submit">salir</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="contenido">
+                            <p>¿Cambió de telefono, su correo ya no es el mismo o desea cambiar su contraseña? Será de mucha utilidad para nosotros</p>
+                            <div class="imgBx">
+                                <img src="./images/actualizar.svg">
+                            </div>
+                            <div class="titulo">
+                                <h2>¿Desea actualizar datos?</h2>
+                                <a href="#act">
+                                    <button class="submit">actualizar...</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="contenido">
+                            <p>¿Quieres comprar algo y no sabes si es que dispones de ese dinero? <br> Míralo por aquí...</p>
+                            <div class="imgBx">
+                                <img src="./images/dinero.svg">
+                            </div>
+                            <div class="titulo">
+                                <h2>¿Cuánto dinero tengo?</h2>
+                                <a href="#saldo">
+                                    <button class="submit">revisar</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="contenido">
+                            <p>¿Quieres saber cuál es tu número de cuenta? <br> ¡conoce tus datos detallados aquí!</p>
+                            <div class="imgBx">
+                                <img src="./images/perfil.svg">
+                            </div>
+                            <div class="titulo">
+                                <h2>¿cuáles son mis datos?</h2>
+                                <a href="#perfil">
+                                    <button class="submit" onclick="clienteActual.verDatos()">mis datos</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-all" id="hist">
+        <div class="popup">
+            <div class="img-hist"></div>
+            <div class="container-text">
+                <h1>Vamos a ver el historial!</h1>
+                <p>Si es que piensas que alguna de las transacciones no las realizaste tu, hasnoslo saber llamando a 122333444 o acercate a una de nuestras oficinas</p>
+                <table class="content-table" id="content-table">
+                </table>
+            </div>
+            <a href="#" class="btn-close-popup">X</a>
+        </div>
+    </div>
+
+    <div class="container-all" id="trans">
+        <div class="popup">
+            <div class="img-trans"></div>
+            <div class="container-text">
+                <h1>Empecemos!"</h1>
+                <h6>*Procura llenar los campos correctamente para no tener problemas</h6>
+                <p>¿A quién le enviarás dinero?</p>
+                <form class="form-popup">
+                    <input type="text" id="numCuenTransaccion" required>
+                    <label class="lbl">
+		                <span class="text-nomb">Número de cuenta Transacción</span>
+	                </label>
+                </form>
+                <p>¿Cuánto dinero enviarás?</p>
+                <form class="form-popup">
+                    <input type="text" id="montoTransaccion" required>
+                    <label class="lbl">
+		                <span class="text-nomb">Monto a trasferir</span>
+	                </label>
+                </form>
+                <p>Tienes que confirmar esta acción, por su seguridad</p>
+                <form class="form-popup">
+                    <input type="password" id="contraseñaTransaccion" required>
+                    <label class="lbl">
+		                <span class="text-nomb">Coloque aquí su contraseña</span>
+	                </label>
+                </form>
+                <button class="submit-popup" onclick="clienteActual.transaccion()">enviar</button>
+            </div>
+            <a href="#" class="btn-close-popup">X</a>
+        </div>
+    </div>
+
+    <div class="container-all" id="info">
+        <div class="popup">
+            <div class="img-info"></div>
+            <div class="container-text">
+                <h1>Lorem ipsum dolor sit amet, consectetur.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam esse illum exercitationem perferendis accusamus, possimus sed molestiae accusantium necessitatibus neque sit aspernatur</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus facere, sequi. Beatae recusandae, officiis sapiente amet quod vero est vel.</p>
+            </div>
+            <a href="#" class="btn-close-popup">X</a>
+        </div>
+    </div>
+
+    <div class="container-all" id="saldo">
+        <div class="popup">
+            <div class="img-money"></div>
+            <div class="container-text">
+                <h1>Vamos a ver tu dinero...!</h1>
+                <p>Por motivos de seguridad nesesitamos verificar que en realidad eres tú, brindanos por favor tu contraseña como parte de la verificación</p>
+                <p>Si es que tienes alguna ora cuenta abierta por favor es nesesario cerrarla para verficar que en realidad se trata de ti, porque te estimamos</p>
+                <form class="form-popup">
+                    <input type="password" id="contraseñaVerificacion" required>
+                    <label class="lbl">
+		                <span class="text-nomb">Coloca aquí tu contraseña...</span>
+	                </label>
+                </form>
+                <button class="submit-popup" onclick="clienteActual.verSaldo()">ver mi saldo</button>
+            </div>
+            <a href="#" class="btn-close-popup">X</a>
+        </div>
+    </div>
+
+    <div class="container-all" id="perfil">
+        <div class="popup">
+            <div class="img-perfil"></div>
+            <div class="container-text">
+                <div class="dates">
+                    <h1>¡Porque te quiero hoy, te abrazaré mañana! <br><br> Tus datos son: <br> </h1>
+                    <h3>Tu nombre es: </h3>
+                    <h2 id="nameProfile"></h2>
+                    <h3>Tu usuario es:</h3>
+                    <h2 id="userProfile"></h2>
+                    <h3>Tu DNI es: </h3>
+                    <h2 id="dniProfile"></h2>
+                    <h3>Tu fecha de nacimiento es: </h3>
+                    <h2 id="birthProfile"></h2>
+                    <h3>Tu teléfono es: </h3>
+                    <h2 id="numTelfProfile"></h2>
+                    <h3>Tu número de cuenta es:</h3>
+                    <h2 id="numCuenProfile"></h2>
+                    <h3>Has ingresado exactamente: </h3>
+                    <h2 id="singupProfile"></h2>
+                </div>
+            </div>
+            <a href="#" class="btn-close-popup">X</a>
+        </div>
+    </div>
+
+    <div class="container-all" id="act">
+        <div class="popup">
+            <div class="img-update"></div>
+            <div class="container-text">
+                <h1>Empecemos!"</h1>
+                <h6>*sólo llena los campos que quieres modificar</h6>
+                <p>¿Quieres cambiar tu usuario?</p>
+                <form class="form-popup">
+                    <input type="text" id="usuarioNuevo" required>
+                    <label class="lbl">
+		                <span class="text-nomb">Usuario Nuevo</span>
+	                </label>
+                </form>
+                <p>¿Quieres cambiar tu telefono?</p>
+                <form class="form-popup">
+                    <input type="text" id="telefonoNuevo" required>
+                    <label class="lbl">
+		                <span class="text-nomb">Teléfono Nuevo</span>
+	                </label>
+                </form>
+                <p>¿Quieres cambiar tu contraseña?</p>
+                <form class="form-popup">
+                    <input type="password" id="anteriorContraseña" required>
+                    <label class="lbl">
+		                <span class="text-nomb">Contraseña Antigua</span>
+	                </label>
+                </form>
+                <p>Confirma tu contraseña</p>
+                <form class="form-popup">
+                    <input type="password" id="nuevaContraseña" required>
+                    <label class="lbl">
+		                <span class="text-nomb">Contraseña Nueva</span>
+	                </label>
+                </form>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptates doloremque, quas ipsa doloribus vero exercitationem obcaecati quos similique necessitatibus natus fugit praesentium ut at in amet perspiciatis, eum repudiandae!</p>
+                <button class="submit-popup" onclick="clienteActual.actDatos();">actualizar</button>
+            </div>
+            <a href="#" class="btn-close-popup">X</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/menu.js"></script>
+</body>
+
+</html>

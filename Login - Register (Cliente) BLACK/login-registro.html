@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Iniciar sesión</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/logingStyles.css">
+    <link rel="icon" type="image/svg" href="./images/logo.svg">
+</head>
+
+<body>
+    <img class="fondo" src="./images/fondoLogin.png">
+    <div class="cont">
+        <div class="form sign-in">
+            <h1>BIENVENIDO</h1>
+            <label>
+            <span>Usuario</span>
+            <input type="email" id="emailInicio">
+            </label>
+            <label>
+            <span>Contraseña</span>
+            <input type="password" id="contraseñaInicio">
+            </label>
+            <button class="submit" type="button" onclick="inicioSesion()&&clieteActual.inicioSesion()">Inicia Sesión</button>
+            <button onclick="olvideCont()">
+                <p class="forgot-pass">¿Olvidaste tu contraseña?</p>
+            </button>
+        </div>
+
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img-text m-up">
+                    <h2>¿Aún no estas registrado?</h2>
+                    <p>"texto"</p>
+                </div>
+                <div class="img-text m-in">
+                    <h2>¿Por qué confiar en Mini Banco La salle? </h2>
+                    <p>xdfxddxd </p>
+                </div>
+                <div class="img-btn">
+                    <span class="m-up">Registrate</span>
+                    <span class="m-in">Ingresa</span>
+                </div>
+
+            </div>
+            <div class="form sign-up">
+                <h1>REGISTRATE</h1>
+                <label>
+                <span>Nombre</span>
+                <input type="text" name="nombreRegistro" id="nombreRegistro"> 
+            </label>
+                <label>
+                <span>Email</span>
+                <input type="email" name="emailRegistro" id="emailRegistro">
+            </label>
+                <label>
+                <span>Contraseña</span>
+                <input type="password" name="contraseñaRegistro" id="contraseñaRegistro">
+            </label>
+                <label>
+                <span>Dni</span>
+                <input type="text" name="dni" id="dni">
+            </label>
+                <label>
+                <span>Fecha de fechaNacimiento</span>
+                <input type="date" name="fechaNacimiento" max="2002-12-31" id="fechaNacimiento">
+            </label>
+                <label>
+                <span>telefono</span>
+                <input type="text" name="telefono" id="telefono">
+            </label>
+                <button type="button" class="submit" onclick="registroCliente()">Ingresa Ahora</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</body>
+
+</html>
